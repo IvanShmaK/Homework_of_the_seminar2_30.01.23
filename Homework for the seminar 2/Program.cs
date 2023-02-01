@@ -37,16 +37,16 @@ int Number(int number)
     int num1 = number;
     while ((num1 > 1000) || (num1 < -1000))
     {                                         //делим наше число (в том числе отрицательные числа) на 10 до тех пор, пока оно не станет трехзначным
-        num1 = num1 / 10;     //опытным путем установил, что введенное число должно быть меньше 2200000000 
-    }                          //(иначе Unhandled exception. System.OverflowException: Value was either too large or too small for an Int32.)
+        num1 = num1 / 10;     
+    }                          
 
     int num2 = num1 % 10; //находим третью цифру получившегося трехзначного числа
     return Math.Abs(num2); // возвращаем модуль полученной третьей цифры, чтобы ответ не был отрицательным
 }
 
 Console.Write("Input your number: ");
-int number1 = Convert.ToInt32(Console.ReadLine());
-
+int number1 = Convert.ToInt32(Console.ReadLine()); //опытным путем установил, что введенное число должно быть меньше 2200000000 
+                                                   //(иначе Unhandled exception. System.OverflowException: Value was either too large or too small for an Int32.)
 if((number1 > 99) || (number1 < -99))
 {
     int result = Number(number1);
