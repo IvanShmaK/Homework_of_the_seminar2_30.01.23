@@ -22,7 +22,7 @@ if ((user_number > 99 && user_number < 1000) || (user_number < -99 && user_numbe
 }
 else
 {
-    Console.WriteLine($"Error, your numder is not 3-digit!");
+    Console.WriteLine("Error, your numder is not 3-digit!");
 }
 */
 
